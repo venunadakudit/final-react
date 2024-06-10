@@ -1,40 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-/*
-*Header
-* - Logo
-* - Nav Items
-*Body
-* - Search
-* - ReastaurantContainer
-* - - RestaurantCard
-* Footer
-* -Copyright
-* -Links
-* -Address
-* -Contact 
-*/
-const Header = () => {
-    return(
-        <div className="header">
-            <div className="logo-container">
-              <img className="logo" src="https://tse4.mm.bing.net/th?id=OIP.8kuEBgMkksdxISAbhul21QHaFT&pid=Api&P=0&h=180" alt="" />
-            </div>
-            <div className="nav-items">
-                <ul>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Contact Us</li>
-                    <li>Cart</li>
-                </ul>
-            </div>
-        </div>
-    )
-}
+ 
+ 
 
-const RestaurantCard = (props) => {
-     const { resData } = props;
+const RestaurantCard = (props) => { 
+    const {resData} = props;
      const {cloudinaryImageId, name, cuisines, costForTwo, avgRating} = resData?.info;
     return(
         <div className="res-card">
@@ -728,11 +699,11 @@ const Body = () => {
                   <RestaurantCard resData = {resList[7]} /> 
                   <RestaurantCard resData = {resList[8]} />   */}
 
-                  {
+                   {
                     resList.map((restaurant) => (
-                      <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+                        <RestaurantCard key={restaurant.info.id} resData={restaurant} />
                     ))
-                  }
+                   }
                    
                   
 

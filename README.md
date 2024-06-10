@@ -22,3 +22,20 @@
 
 
 
+/**
+*Header
+* - Logo
+* - Nav Items
+* Body
+* - Search
+* - ReastaurantContainer
+* - - RestaurantCard
+* Footer
+* -Copyright
+* -Links
+* -Address
+* -Contact 
+**/
+
+
+
