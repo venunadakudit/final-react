@@ -1,10 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import Header from "./components/Header";
-import Body from "./components/Body";
-import RestaurantCard from "./components/RestaurantCard";
-
-
+import RestaurantCard from "./RestaurantCard";
 const resList = [
     {
     info: {
@@ -658,17 +652,36 @@ const resList = [
     widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
     ]
-
-
- 
-const AppLayout = () => {
+const Body = () => {
     return(
-        <div className="app">
-             <Header />
-             <Body />
+        <div className="body">
+            <div className="search-container">
+                <input className="search-input" type="text" />
+                <button className="search-btn">Search</button>
+            </div>
+            <div className="restaurant-container">
+                  
+                  {/* <RestaurantCard resData = {resList[0]} /> 
+                  <RestaurantCard resData = {resList[1]} /> 
+                  <RestaurantCard resData = {resList[2]} /> 
+                  <RestaurantCard resData = {resList[3]} />  
+                  <RestaurantCard resData = {resList[4]} /> 
+                  <RestaurantCard resData = {resList[5]} /> 
+                  <RestaurantCard resData = {resList[6]} /> 
+                  <RestaurantCard resData = {resList[7]} /> 
+                  <RestaurantCard resData = {resList[8]} />   */}
+
+                   {
+                    resList.map((restaurant) => (
+                        <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+                    ))
+                   }
+                   
+                  
+
+            </div>
         </div>
     )
 }
-const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<AppLayout />)
+export default Body;
