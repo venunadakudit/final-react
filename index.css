@@ -10,3 +10,5 @@ body{margin: 0;padding: 0;}
 .res-img{width: 200px;height: 150px;object-fit: cover; }
 .res-card h4, .res-card h3, .res-card img{margin-bottom: 10px;margin-top: 0px;}  
 .restaurant-container{display: flex;justify-content: space-around;flex-wrap: wrap;} 
+.filter-btn{padding: 10px 20px;background-color: #ffffff; border: 1px solid #00000026;cursor: pointer;margin: 10px 10px 10px 20px;}
+.filter-btn:hover{background-color: #00000026; color: #ffffff;}

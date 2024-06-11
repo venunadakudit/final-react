@@ -37,5 +37,13 @@
 * -Contact 
 **/
 
+Two types of Export/Import
+ -Default Export/Import
+  -export default component;
+  -import component from "path";    
+
+ -Named Export/Import
+  -export const component;
+  -import {Component} from "path";
 
 

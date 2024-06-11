@@ -3,9 +3,8 @@ import resList from "../utils/mockData";
 const Body = () => {
     return(
         <div className="body">
-            <div className="search-container">
-                <input className="search-input" type="text" />
-                <button className="search-btn">Search</button>
+            <div className="filter">
+                <button className="filter-btn" onMouseOver = {() => {console.log("Hello")}} >Top Rated Restaurant</button>
             </div>
             <div className="restaurant-container">
                    
