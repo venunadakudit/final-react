@@ -44,3 +44,9 @@ Two types of Export/Import
 -Named Export/Import
 -export const component;
 -import {Component} from "path";
+
+
+# React Hooks
+(Normal JS utility functions)
+-useState()  -  Superpowerful State Variables in react
+-useEffect()   will use 20%
