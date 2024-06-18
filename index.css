@@ -12,3 +12,5 @@ body{margin: 0;padding: 0;}
 .restaurant-container{display: flex;justify-content: space-around;flex-wrap: wrap;} 
 .filter-btn{padding: 10px 20px;background-color: #ffffff; border: 1px solid #00000026;cursor: pointer;margin: 10px 10px 10px 20px;}
 .filter-btn:hover{background-color: #00000026; color: #ffffff;}
+.shimmer-container{display: flex;justify-content: center;align-items: center;;margin-top: 50px;}
+.shimmer-card{width: 250px;height: 400px;background-color: #8080800f; margin: 10px 10px 10px 20px;}
