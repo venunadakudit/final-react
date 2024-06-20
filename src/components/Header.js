@@ -1,6 +1,7 @@
 import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 const Header = () => {
+   //btnNameReact is the new variable, after rerender the header. IMPORTANT
  const [btnNameReact, setBtnNameReact] = useState('Login');  
  console.log('Render header'); 
   return (
