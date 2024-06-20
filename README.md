@@ -1,5 +1,7 @@
 # Namasthe React
-
+- Reinstall for node_modules - npm install
+  required: { node: '^18.17.0 || >=20.5.0' },
+  current: { node: 'v18.12.1', npm: '8.19.2' }
 # parcel
 
 - Dev Build

@@ -4,7 +4,10 @@ import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  
+  const [searchText, setSearchText] = useState(""); 
+
+  // Whenever state variable update, react triggers reconciliation cycle (re-render the component)
+  console.log("Body Rendered");
   useEffect(() => {
      fetchData();
   }, []);
@@ -27,6 +30,25 @@ const Body = () => {
   return listOfRestaurants.length === 0 ? <Shimmer /> : ( 
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input type="text" className="search-box" value={searchText} 
+          onChange={(e) => {  
+          setSearchText(e.target.value);
+          }} 
+          />
+          <button className="search-btn"
+          onClick={() => {
+          //Filter the restaurant cards and update the UI
+          // searchText
+          console.log(searchText);
+
+            const filteredRestaurant = listOfRestaurants.filter(
+              (res) => res.info.name.includes(searchText)
+          );
+            setListOfRestaurants(filteredRestaurant);
+          }}
+          >Search</button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
@@ -40,8 +62,8 @@ const Body = () => {
         </button>
       </div>
       <div className="restaurant-container">
-        {listOfRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+        {listOfRestaurants.map((res) => (
+          <RestaurantCard key={res.info.id} resData={res} />
         ))}
       </div>
     </div>
@@ -49,3 +71,4 @@ const Body = () => {
 };
 
 export default Body;
+  

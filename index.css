@@ -10,8 +10,11 @@ body{margin: 0;padding: 0;}
 .res-img{width: 200px;height: 150px;object-fit: cover; }
 .res-card h4, .res-card h3, .res-card img{margin-bottom: 10px;margin-top: 0px;}  
 .restaurant-container{display: flex;justify-content: space-around;flex-wrap: wrap;} 
-.filter-btn{padding: 10px 20px;background-color: #ffffff; border: 1px solid #00000026;cursor: pointer;margin: 10px 10px 10px 20px;}
+.filter-btn{padding: 10px 20px;background-color: #ffffff; border: 1px solid #00000026;cursor: pointer;margin: 10px 20px; height: 40px;}
 .filter-btn:hover{background-color: #00000026; color: #ffffff;}
 .shimmer-container{display: flex;justify-content: center;align-items: center;;margin-top: 50px;}
 .shimmer-card{width: 250px;height: 400px;background-color: #8080800f; margin: 10px 10px 10px 20px;border:1px solid rgb(202, 195, 195);}
 .login-btn{padding: 0 20px;cursor: pointer;}
+.filter{display: flex;justify-content: space-between;}
+.search-box{width: 200px; padding: 10px; border: 1px solid #00000026; margin-right: 10px;margin: 10px 0px 10px 20px;}
+.search-btn{padding: 10px 20px; background-color: #ffffff; border: 1px solid #00000026;cursor: pointer;}
