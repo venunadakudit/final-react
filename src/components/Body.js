@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  const [filteredRestaurant, setFilteredRestaurant] = useState([])
+  const [listOfRestaurants, setListOfRestaurants] = useState([]); 
   const [searchText, setSearchText] = useState(""); 
 
   // Whenever state variable update, react triggers reconciliation cycle (re-render the component)
@@ -21,8 +20,7 @@ const Body = () => {
     
      console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
      //Optional Chaining
-    setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants); 
-    setFilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);  
   };
 
   // if(listOfRestaurants.length === 0){
@@ -47,7 +45,7 @@ const Body = () => {
             const filteredRestaurant = listOfRestaurants.filter(
               (res) => res.info.name.toLowerCase().includes(searchText.toLowerCase())
           );
-            setFilteredRestaurant(filteredRestaurant);
+            setListOfRestaurants(filteredRestaurant);
           }}
           >Search</button>
         </div>
@@ -64,7 +62,7 @@ const Body = () => {
         </button>
       </div>
       <div className="restaurant-container">
-        {filteredRestaurant.map((res) => (
+        {listOfRestaurants.map((res) => (
           <RestaurantCard key={res.info.id} resData={res} />
         ))}
       </div>
