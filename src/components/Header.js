@@ -18,7 +18,7 @@ const Header = () => {
           </li>
           <li>
             <Link to="/contact">Contact Us</Link>
-            </li>
+          </li>
           <li>Cart</li>
           <button className="login-btn"
           onClick={() => {
