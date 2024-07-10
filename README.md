@@ -3,6 +3,14 @@
 - Reinstall for [dist & .parcel-cache files] - npx parcel index.html
   required: { node: '^18.17.0 || >=20.5.0' },
   current: { node: 'v18.12.1', npm: '8.19.2' }
+
+# Configuring the Project: 
+use a package manager known as npm or yarn
+npm init
+ - It creates a package.json file.
+npm install -D parcel
+ - Now we will get a package-lock.json file.
+
 # parcel
 
 - Dev Build
