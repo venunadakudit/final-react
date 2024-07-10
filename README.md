@@ -1,6 +1,6 @@
 # Namasthe React
 - Reinstall for node_modules - npm install
-- Reinstall for [dist & .parcel-cache files] - npm parcel index.html
+- Reinstall for [dist & .parcel-cache files] - npx parcel index.html
   required: { node: '^18.17.0 || >=20.5.0' },
   current: { node: 'v18.12.1', npm: '8.19.2' }
 # parcel
