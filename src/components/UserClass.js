@@ -11,11 +11,18 @@ import React from "react";
   }
     render() {
       const {name, location, Contact} = this.props; // this is called distructuring
-      const  {count, count2} = this.state;
+      const  {count} = this.state;
       return (
         <div className="user-card">
           <h1>Count = {count}</h1>
-          <h1>Count2 = {count2}</h1>
+          <button onClick={()=>{ 
+              // this.state.count = this.state.count + 1; // NEVER UPDATE STATE VARIABLES DIRECTLY
+              this.setState({
+                   count :  this.state.count + 1 //whenever state variable update the count, React will rerender the component
+              });
+            }}
+          >
+            Count Increase</button>
           <h2>Name: {name}</h2>
           <h3>Location: {location}</h3>
           <h4>Contact: {Contact}</h4>
