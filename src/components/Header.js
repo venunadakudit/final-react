@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
    //btnNameReact is the new variable, after rerender the header. IMPORTANT
  const [btnNameReact, setBtnNameReact] = useState('Login');  
- console.log('Render header'); 
+//  console.log('Render header'); 
   return (
     <div className="header">
       <div className="logo-container">
