@@ -12,25 +12,36 @@ class About extends React.Component{
         console.log("Parent Mount");
     }
     render(){
-         console.log("Parent Render");
+         console.log("Parent Render");  
          return (   
         <div>
             <h1>About</h1>
             <p>This is the about page content</p> 
             {/* <User name = {"Venu from (function)"} /> */}
-            <UserClass name = {"Venu from (Class)"} location = {"Hyderabad!!"} Contact = {"@venunadakuditi111"} />
+            <UserClass name = {"First"} location = {"Hyderabad!!"} Contact = {"@venunadakuditi111"} />
+             <UserClass name = {"Second"} location = {"Bengluru"} Contact = {"@venunadakuditi222"} />
+             <UserClass name = {"Third"} location = {"Avanigadda"} Contact = {"@venunadakuditi333"} />
         </div>
     );
     }
 }
-// const About = () => {
-//     return (
-//         <div>
-//             <h1>About</h1>
-//             <p>This is the about page content</p> 
-//             {/* <User name = {"Venu from (function)"} /> */}
-//             <UserClass name = {"Venu from (Class)"} location = {"Hyderabad!!"} Contact = {"@venunadakuditi111"} />
-//         </div>
-//     );
-// };
+
+/*
+   - Parent Constructor
+   - Parent render
+    
+     - First Constructor
+     - First render
+
+     - Second Constractor
+     - Second render
+
+     <DOM UPDATERD - IN SINGLE BATCH>
+
+     - First ComponentDidMount
+     - Second ComponentDidMount
+
+  -  Parent ComponentDidMount
+*/
+
 export default About;

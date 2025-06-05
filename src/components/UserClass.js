@@ -8,13 +8,13 @@ import React from "react";
       count: 0, //first variable
       count2: 2, //second variable
       }
-      console.log("child constructor")
+      console.log(this.props.name + " child constructor")
   }
    componentDidMount(){ // componentDidMount is for call the API's
-    console.log("child mount");
+    console.log(this.props.name + " child conponentDidMount");
    }
     render() {
-      console.log("child render");
+      console.log(this.props.name + " child render");
       const {name, location, Contact} = this.props; // this is called distructuring
       const  {count} = this.state;
       return (
