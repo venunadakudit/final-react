@@ -5,22 +5,21 @@ import React from "react";
 class About extends React.Component{
     constructor(props){
         super(props);
-        console.log("Parent Constructor");
+        //console.log("Parent Constructor");
     }
 
     componentDidMount(){
-        console.log("Parent Mount");
-    }
+       // console.log("Parent Mount");
+    } 
     render(){
-         console.log("Parent Render");  
+        // console.log("Parent Render");  
          return (   
         <div>
             <h1>About</h1>
             <p>This is the about page content</p> 
             {/* <User name = {"Venu from (function)"} /> */}
-            <UserClass name = {"First"} location = {"Hyderabad!!"} Contact = {"@venunadakuditi111"} />
-             <UserClass name = {"Second"} location = {"Bengluru"} Contact = {"@venunadakuditi222"} />
-             <UserClass name = {"Third"} location = {"Avanigadda"} Contact = {"@venunadakuditi333"} />
+            <UserClass name = {"First"} location = {"Hyderabad!!"} Contact = {"@venunadakuditi111"} /> 
+             {/* <User /> */}
         </div>
     );
     }

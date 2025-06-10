@@ -5,33 +5,36 @@ import React from "react";
     super(props);
                       // THis is the best place to create state variables and recieve the props.
     this.state = {
-      count: 0, //first variable
-      count2: 2, //second variable
-      }
-      console.log(this.props.name + " child constructor")
+      userInfo:{
+        name : "venu",
+        location : "Hyd",
+        avatar_url: "dummy_img"
+      },
+    };
+      //console.log(this.props.name + " child constructor")
   }
-   componentDidMount(){ // componentDidMount is for call the API's
-    console.log(this.props.name + " child conponentDidMount");
+   async componentDidMount(){ // componentDidMount is for call the API's
+    //console.log(this.props.name + " child conponentDidMount");
+      const data = await fetch("https://api.github.com/users/akshaymarch7");
+      const json = await data.json();
+
+      this.setState({   //Updating stage start here
+        userInfo : json,
+      });
+      console.log(json);
    }
     render() {
-      console.log(this.props.name + " child render");
-      const {name, location, Contact} = this.props; // this is called distructuring
-      const  {count} = this.state;
+      //console.log(this.props.name + " child render");
+     // const {name, location, Contact} = this.props; // this is called distructuring 
+     const {name, location, avatar_url} = this.state.userInfo;
+     //debugger;
       return (
         <div className="user-card">
-          <h1>Count = {count}</h1>
-          <button onClick={()=>{ 
-              // this.state.count = this.state.count + 1; // NEVER UPDATE STATE VARIABLES DIRECTLY
-              this.setState({
-                   count :  this.state.count + 1 //whenever state variable update the count, React will rerender the component
-              });
-            }}
-          >
-            Count Increase</button>
+           <img src={avatar_url} style={{width:"200px", height:"200px"}} />
           <h2>Name: {name}</h2>
           <h3>Location: {location}</h3>
-          <h4>Contact: {Contact}</h4>
-          <h5>Class Based component</h5>
+         
+          
         </div>
       );
     }
